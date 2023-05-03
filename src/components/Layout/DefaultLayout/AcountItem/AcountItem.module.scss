@@ -1,0 +1,42 @@
+.AcountItem-wrapper{
+    padding: 2px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover{
+    background-color: azure;
+    }
+}
+.avatar{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+object-fit: cover;
+}
+.info {
+    flex: 1;
+    margin-left: 12px;
+}
+.info h4{
+margin-bottom: -5px;
+}
+.name {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+}
+.username {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.check{
+   margin-left: 6px;
+   font-size: 14px;
+   color: rgb(32, 213, 236);;
+   margin-top: 7px;
+}

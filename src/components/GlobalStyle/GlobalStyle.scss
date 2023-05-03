@@ -1,0 +1,40 @@
+//
+body{
+
+// font-family: 'ProximaNova', sans-serif;
+}
+//
+body .tippy-box{
+
+    text-align: left;
+
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+  
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+    padding: 3px 0;
+}
+//fonts
+
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/Fonts/Proxima-Nova-Regular");
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/Fonts/Proxima-Nova-Semibold");
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/Fonts/Proxima-Nova-Bold");
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url("/assets/Fonts/sofiapro-bold.woff");
+    font-weight: 700;
+}

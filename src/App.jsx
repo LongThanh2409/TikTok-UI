@@ -1,15 +1,35 @@
-
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Fragment } from "react"
 import './App.css'
-
+import DefaultLayout from "./components/Layout/DefaultLayout"
+import { publicRoute } from "./routes"
 function App() {
 
 
   return (
     <>
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+            {publicRoute.map((route, index) => {
+              const Page = route.component;
+              let Layout = DefaultLayout;
 
-      <p className="read-the-docs bg-red-600">
-        Click on the Vite and React logos to learn more
-      </p>
+              if (route.layout) {
+                Layout = route.layout;
+              } else if (route.layout === null) {
+                Layout = Fragment;
+              }
+
+              return (
+                <Route key={index} path={route.path} element={<Layout>  <Page /> </Layout>
+                }
+                />
+              );
+            })}
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   )
 }
