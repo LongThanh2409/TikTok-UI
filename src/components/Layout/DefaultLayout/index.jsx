@@ -3,6 +3,7 @@ import Header from "./Header";
 import Slidebar from "./Sidebar";
 
 
+// eslint-disable-next-line react/prop-types
 const DefaultLayout = ({ children }) => {
     return (
 

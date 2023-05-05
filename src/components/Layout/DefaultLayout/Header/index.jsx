@@ -1,9 +1,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faCircleXmark,
-    faMagnifyingGlass,
-    faSpinner,
+
     faEllipsisVertical,
     faCircleQuestion,
     faKeyboard,
@@ -16,18 +14,18 @@ import {
     faSignOut,
 
 } from "@fortawesome/free-solid-svg-icons"
-import { useEffect, useState } from 'react';
+
 import className from "classnames/bind"
 import styles from "./Header.module.scss"
 import Tippy from '@tippyjs/react'
-import HeadTippy from '@tippyjs/react/headless'; // different import path!
+// different import path!
 import 'tippy.js/dist/tippy.css'; // optional
-import PoperWrapper from "./Popper/index"
-import AcountItem from '../AcountItem';
+
 import Button from "../Button/index"
 import Menu from './Popper/Menu';
 import { MessageIcon, MailBox_Icon } from '../../../Icons';
 import Image from '../../../Image';
+import Search from '../../components/Header/Search'
 const cx = className.bind(styles);
 
 const MENU_ICON = [
@@ -56,10 +54,7 @@ const MENU_ICON = [
 
 
 const Header = () => {
-    const [searchResult, setSearchResult] = useState([])
-    useEffect(() => {
-        setSearchResult([])
-    }, [])
+
     const currentUser = true
     const userMenu = [
         {
@@ -124,36 +119,8 @@ const Header = () => {
                     </svg>
                 </div>
                 {/* Tìm kiếm */}
-                <HeadTippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    placement='top-start'
-                    render={attrs => (
-                        <div className={cx("box-search-result")} tabIndex="-1" {...attrs}>
-                            <PoperWrapper>
-                                <h1 className={cx("acount")}>Acount</h1>
-                                <AcountItem />
-                                <AcountItem />
-                                <AcountItem />
-                            </PoperWrapper>
-                        </div>
-                    )}>
 
-                    <div className={cx("input_tag", " relative flex w-[415px] h-[46px]  bg-[#1618230F] rounded-3xl pl-4 ")}>
-                        <input className={cx("input", 'inp caret-pink-500 bg-transparent outline-none h-full  flex-1 py-3 ')} type="text" name="" id="" placeholder="Tìm kiếm " spellCheck={false} />
-                        <button className='mr-2'>
-                            {/* clear */}
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        {/* Loading */}
-                        <FontAwesomeIcon className='absolute right-[60px] top-1/2 translate-y-[-50%]' icon={faSpinner} />
-                        <button className={cx("search", "text-gray-400 border-l-2  w-[52px] h-full hover:bg-[rgba(11,13,20,0.06)] active:bg-gray-200  rounded-r-3xl")} >
-                            {/* search */}
-                            <FontAwesomeIcon className={cx(' mt-1 text-xl ', 'icon_search')} icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </HeadTippy>
-
+                <Search />
 
                 {/* right */}
                 <div className={cx("action")}>
@@ -161,8 +128,8 @@ const Header = () => {
 
                         <div className={cx("current-user, flex")}>
                             <Tippy className={cx("tippy-box")} delay={[0, 50]} content="Tải video lên" placement='bottom'>
-                                <button className={cx("btn-action", 'pr-4 border-2 h-9  rounded-md flex justify-center items-center ')}><FontAwesomeIcon className='mx-2' icon={faPlus} />
-                                    <h4 className='font-semibold'>Tải lên</h4>
+                                <button className={cx("btn-action", 'mr-4 border-2 h-9  rounded-md flex justify-center items-center ')}><FontAwesomeIcon className='mx-2' icon={faPlus} />
+                                    <h4 className='font-semibold mr-3'>Tải lên</h4>
                                 </button>
                             </Tippy>
                             <Tippy className={cx("tippy-box")} content="Tin nhắn" delay={[0, 50]} placement='bottom'>

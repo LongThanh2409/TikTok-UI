@@ -1,29 +1,4 @@
-.input:not(:placeholder-shown) ~ .search{
-color: rgba(22, 24, 35, 0.75);
-    
-}
-.input_tag{
-    margin-left: 165px;
-    
-}
-.input_tag:focus-within{
-border: 1px solid gray;
-}
-.input_tag:focus-within  .search{
-outline: none;
-}
 
-.box-search-result{
-    width: 361px;
- }
-.acount{
-    height: 30px;
-    padding: 5px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-}
 .more-btn{
     font-size: 20px;
     margin-left: 20px;
@@ -36,13 +11,15 @@ align-items: center;
 
 }
 .btn-action{
-padding: 0  0 0 16px;
+padding: 0 8px 0 8px;
+
 }
 .btn-avatar{
 width: 32px;
 height: 32px;
 object-fit: cover;
 border-radius: 50%;
+margin-left: 8px;
 cursor: pointer;
-margin-left: 16px;
+
 }
