@@ -13,7 +13,7 @@ const DefaultLayout = ({ children }) => {
             <Header />
             <div className={cx("container", " w-[1400px] flex")}>
                 <Slidebar />
-                <div className="content flex-1">
+                <div className=" content flex-1 text-center">
                     {children}
                 </div>
             </div>
