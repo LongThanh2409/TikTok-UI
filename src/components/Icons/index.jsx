@@ -27,7 +27,7 @@ export const MailBox_Icon = ({ width = "32px", height = "32px", className }) => 
     </>
 }
 // eslint-disable-next-line react/prop-types
-export const Loading = ({ width = "15px", height = "15px", className }) => {
+export const Loading = ({ width = "20px", height = "20px", className }) => {
     return <>
         <svg className={className}
             width={width}

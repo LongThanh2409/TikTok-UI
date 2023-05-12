@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Fragment } from "react"
 import './App.css'
-import DefaultLayout from "./components/Layout/DefaultLayout"
+import DefaultLayout from "./Layout/DefaultLayout/DefaultLayout"
 import { publicRoute } from "./routes"
 function App() {
 
